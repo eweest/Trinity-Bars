@@ -1,4 +1,4 @@
-# [RUS]
+# RUS
 <h1 align="center">Trinity-Bars</h1>
 
 Скрипт **[moonloader](https://gtaforums.com/topic/890987-moonloader/)** заменяяющий текстдравы потрбеностей игрока (Еда, Вода, Гигиена) на **[gta samp](https://sa-mp.com/)** сервере Trinity GTA.
