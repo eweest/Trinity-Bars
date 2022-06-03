@@ -124,9 +124,9 @@ function main()
 		end
 		--
 		TRINITYGTA = true
-		sampAddChatMessage(TAG .. "{FFFFFF}Скрипт запущен. Автор: {FFCC00}eweest{FFFFFF}. Версия: {FFCC00}" .. thisScript().version .. "{FFFFFF}. Помощь {FFCC00}" .. CMD_HELP, 0xFFCC00)
+		sampAddChatMessage(TAG .. "{FFFFFF}РЎРєСЂРёРїС‚ Р·Р°РїСѓС‰РµРЅ. РђРІС‚РѕСЂ: {FFCC00}eweest{FFFFFF}. Р’РµСЂСЃРёСЏ: {FFCC00}" .. thisScript().version .. "{FFFFFF}. РџРѕРјРѕС‰СЊ {FFCC00}" .. CMD_HELP, 0xFFCC00)
 	else
-		sampAddChatMessage(TAG .. "{FFFFFF}Скрипт " .. thisScript().name .. " (v" .. thisScript().version .. ") не запущен, так как вы игрыете не на Trinity GTA.", 0xFFCC00)
+		sampAddChatMessage(TAG .. "{FFFFFF}РЎРєСЂРёРїС‚ " .. thisScript().name .. " (v" .. thisScript().version .. ") РЅРµ Р·Р°РїСѓС‰РµРЅ, С‚Р°Рє РєР°Рє РІС‹ РёРіСЂС‹РµС‚Рµ РЅРµ РЅР° Trinity GTA.", 0xFFCC00)
 		TRINITYGTA = false 
 	end
 	----
@@ -134,7 +134,7 @@ function main()
 	--| COMMANDS
 	sampRegisterChatCommand("bars", function(cmd) -- HELP
 		if (cmd == "position" or cmd == "pos") then -- POSITION
-			sampAddChatMessage(TAG .. "{FFFFFF}Для сохранения позиции, нажмите {FFCC00}левую кнопку мыши {FFFFFF}или{FFCC00} ENTER.", 0xFFCC00)
+			sampAddChatMessage(TAG .. "{FFFFFF}Р”Р»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РїРѕР·РёС†РёРё, РЅР°Р¶РјРёС‚Рµ {FFCC00}Р»РµРІСѓСЋ РєРЅРѕРїРєСѓ РјС‹С€Рё {FFFFFF}РёР»Рё{FFCC00} ENTER.", 0xFFCC00)
 			setPosition = true
 		-- SETTINGS CMD
 		elseif (cmd == "number" or cmd == "num") then -- NUMBERS
@@ -142,37 +142,37 @@ function main()
 				DB["NUMBER"] = not DB["NUMBER"]
 				if DB["NUMBER"] then
 					addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
-					sampAddChatMessage(TAG .."{FFFFFF}Показатель потребностей персонажа в цифрах {32FF32}включен.", 0xFFCC00)
+					sampAddChatMessage(TAG .."{FFFFFF}РџРѕРєР°Р·Р°С‚РµР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёС„СЂР°С… {32FF32}РІРєР»СЋС‡РµРЅ.", 0xFFCC00)
 					DB["NUMBER"] = true
 				else
 					addOneOffSound(0.0, 0.0, 0.0, SOUNDS["CANCEL"])	
-					sampAddChatMessage(TAG .."{FFFFFF}Показатель потребностей персонажа в цифрах {FF3232}отключен.", 0xFFCC00)
+					sampAddChatMessage(TAG .."{FFFFFF}РџРѕРєР°Р·Р°С‚РµР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёС„СЂР°С… {FF3232}РѕС‚РєР»СЋС‡РµРЅ.", 0xFFCC00)
 					DB["NUMBER"] = false
 				end
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}Показатель потребностей персонажа в цифрах доступен только в стиле {FFCC00}#1 'Стамина'{FFFFFF}.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РџРѕРєР°Р·Р°С‚РµР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёС„СЂР°С… РґРѕСЃС‚СѓРїРµРЅ С‚РѕР»СЊРєРѕ РІ СЃС‚РёР»Рµ {FFCC00}#1 'РЎС‚Р°РјРёРЅР°'{FFFFFF}.", 0xFFCC00)
 			end
 			saveDB()
 		elseif (cmd == "view" or cmd == "vw") then -- VIEW MODE
 			DB["VIEW"] = not DB["VIEW"]
 			if DB["VIEW"] then
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
-				sampAddChatMessage(TAG .."{FFFFFF}Потребности персонажа {32FF32}включены.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РџРѕС‚СЂРµР±РЅРѕСЃС‚Рё РїРµСЂСЃРѕРЅР°Р¶Р° {32FF32}РІРєР»СЋС‡РµРЅС‹.", 0xFFCC00)
 				DB["VIEW"] = true
 			else
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["CANCEL"])	
-				sampAddChatMessage(TAG .."{FFFFFF}Потребности персонажа {FF3232}отключены.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РџРѕС‚СЂРµР±РЅРѕСЃС‚Рё РїРµСЂСЃРѕРЅР°Р¶Р° {FF3232}РѕС‚РєР»СЋС‡РµРЅС‹.", 0xFFCC00)
 				DB["VIEW"] = false
 			end
 			saveDB()
 		elseif (cmd == "rotation" or cmd == "rt") then -- VIEW MODE
 			if DB["ROT"] ~= "HORIZONTAL" and (cmd == "rot" or cmd == "rt") then
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
-				sampAddChatMessage(TAG .."{FFFFFF}Вы активировали {FFCC00}Горизонтальный{FFFFFF} режим.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}Р’С‹ Р°РєС‚РёРІРёСЂРѕРІР°Р»Рё {FFCC00}Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№{FFFFFF} СЂРµР¶РёРј.", 0xFFCC00)
 				DB["ROT"] = "HORIZONTAL"
 			else
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["CANCEL"])	
-				sampAddChatMessage(TAG .."{FFFFFF}Вы активировали {FFCC00}Вертикальный{FFFFFF} режим.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}Р’С‹ Р°РєС‚РёРІРёСЂРѕРІР°Р»Рё {FFCC00}Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Р№{FFFFFF} СЂРµР¶РёРј.", 0xFFCC00)
 				DB["ROT"] = "VERTICAL"
 			end
 			saveDB()
@@ -180,30 +180,30 @@ function main()
 		elseif (cmd == "type 1") then -- TYPE 1
 			if (DB["TYPE"] ~= 1) then
 				DB["TYPE"] = 1
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль потребностей персонажа изменен. Вариант: {FFCC00} #1 'Стамина'.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #1 'РЎС‚Р°РјРёРЅР°'.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль потребностей персонажа {FFCC00}#1 'Стамина'{FFFFFF} уже используется!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° {FFCC00}#1 'РЎС‚Р°РјРёРЅР°'{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
 		elseif (cmd == "type 2") then -- TYPE 2
 			if (DB["TYPE"] ~= 2) then
 				DB["TYPE"] = 2
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль потребностей персонажа изменен. Вариант: {FFCC00} #2 'Цифры'.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #2 'Р¦РёС„СЂС‹'.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль потребностей персонажа {FFCC00}#2 'Цифры'{FFFFFF} уже используется!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° {FFCC00}#2 'Р¦РёС„СЂС‹'{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
 		elseif (cmd == "type 3") then -- TYPE 3
 			if (DB["TYPE"] ~= 3) then
 				DB["TYPE"] = 3
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль потребностей персонажа изменен. Вариант: {FFCC00} #3.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #3.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль потребностей персонажа {FFCC00}#3{FFFFFF} уже используется!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° {FFCC00}#3{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
@@ -212,20 +212,20 @@ function main()
 		elseif (cmd == "icons 1") then -- ICONS 1
 			if (DB["ICON_STYLE"] ~= 1) then
 				DB["ICON_STYLE"] = 1
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль иконок изменен. Вариант: {FFCC00} #1.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #1.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль иконок {FFCC00}#1{FFFFFF} уже используется!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє {FFCC00}#1{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
 		elseif (cmd == "icons 2") then -- ICONS 2
 			if (DB["ICON_STYLE"] ~= 2) then
 				DB["ICON_STYLE"] = 2
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль иконок изменен. Вариант: {FFCC00} #2.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #2.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}Стиль иконок {FFCC00}#2{FFFFFF} уже используется!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє {FFCC00}#2{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
@@ -235,7 +235,7 @@ function main()
 			addOneOffSound(0.0, 0.0, 0.0, 1139)
 		else
 			addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
-			sampAddChatMessage(TAG .."{FFFFFF}Неизвестная команда. Введите: {FFCC00}/bars.", 0xFF3232)
+			sampAddChatMessage(TAG .."{FFFFFF}РќРµРёР·РІРµСЃС‚РЅР°СЏ РєРѕРјР°РЅРґР°. Р’РІРµРґРёС‚Рµ: {FFCC00}/bars.", 0xFF3232)
 		end
 	end)
 	----
@@ -248,7 +248,7 @@ function main()
 
 			if isKeyDown(0x01) or isKeyDown(0x0D) then -- LMB or ENTER
 				showCursor(false, false)
-				sampAddChatMessage(TAG .. "{FFFFFF}Положение потребностей персонажа сохранено.", 0xFFCC00)
+				sampAddChatMessage(TAG .. "{FFFFFF}РџРѕР»РѕР¶РµРЅРёРµ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° СЃРѕС…СЂР°РЅРµРЅРѕ.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 				setPosition = false
 				saveDB()
@@ -419,25 +419,25 @@ end
 -- CREATE CUSTOM BARS [END]
 
 -- HELP WINDOW [START]
-local TITLE = "Помощь по: {FFFFFF}"
+local TITLE = "РџРѕРјРѕС‰СЊ РїРѕ: {FFFFFF}"
 local TITLE_COLOR = "{AFE7FF}"
 local TEXT_CMD = [[
-{ffcc00}Основные команды:{ffffff}
-{AFE7FF}/bars{ffffff} - Окно помощи
-{AFE7FF}/bars (pos)ition{ffffff} - Изменение позиции
-{AFE7FF}/bars type [1-3]{ffffff} - Изменение стиля показателей
-{AFE7FF}/bars icons [1-2]{ffffff} - Изменение стиля иконок
-{AFE7FF}/bars rotation(rt){ffffff} - Изменение режима (Вертикально или Горизонтально)
-{AFE7FF}/bars (num)ber{ffffff} - Показать/Скрыть цифры в режиме #1 "Стамина"
-{AFE7FF}/bars view(vw){ffffff} - Показать/Скрыть
-{ffcc00}Полезные советы:{ffffff}
-{AFE7FF}[1]{ffffff} Если показатели показывают "0" и {FF3232}горят красным{ffffff}, откройте и закройте инвентарь.
-{AFE7FF}[2]{ffffff} При замене иконок на свои, используйте размер {ffcc00}32x32{ffffff} пикселя.
-{ffcc00}О скрипте:{ffffff}
-{AFE7FF}Название (Версия){ffffff}			TRINITY Bars (v1.2)
-{AFE7FF}Дата последнего обновления{ffffff}		02.06.2022
-{AFE7FF}Автор скрипта{ffffff}				eweest
-{AFE7FF}Наше сообщество{ffffff}				vk.com/gtatrinitymods
+{ffcc00}РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјР°РЅРґС‹:{ffffff}
+{AFE7FF}/bars{ffffff} - РћРєРЅРѕ РїРѕРјРѕС‰Рё
+{AFE7FF}/bars (pos)ition{ffffff} - РР·РјРµРЅРµРЅРёРµ РїРѕР·РёС†РёРё
+{AFE7FF}/bars type [1-3]{ffffff} - РР·РјРµРЅРµРЅРёРµ СЃС‚РёР»СЏ РїРѕРєР°Р·Р°С‚РµР»РµР№
+{AFE7FF}/bars icons [1-2]{ffffff} - РР·РјРµРЅРµРЅРёРµ СЃС‚РёР»СЏ РёРєРѕРЅРѕРє
+{AFE7FF}/bars rotation(rt){ffffff} - РР·РјРµРЅРµРЅРёРµ СЂРµР¶РёРјР° (Р’РµСЂС‚РёРєР°Р»СЊРЅРѕ РёР»Рё Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕ)
+{AFE7FF}/bars (num)ber{ffffff} - РџРѕРєР°Р·Р°С‚СЊ/РЎРєСЂС‹С‚СЊ С†РёС„СЂС‹ РІ СЂРµР¶РёРјРµ #1 "РЎС‚Р°РјРёРЅР°"
+{AFE7FF}/bars view(vw){ffffff} - РџРѕРєР°Р·Р°С‚СЊ/РЎРєСЂС‹С‚СЊ
+{ffcc00}РџРѕР»РµР·РЅС‹Рµ СЃРѕРІРµС‚С‹:{ffffff}
+{AFE7FF}[1]{ffffff} Р•СЃР»Рё РїРѕРєР°Р·Р°С‚РµР»Рё РїРѕРєР°Р·С‹РІР°СЋС‚ "0" Рё {FF3232}РіРѕСЂСЏС‚ РєСЂР°СЃРЅС‹Рј{ffffff}, РѕС‚РєСЂРѕР№С‚Рµ Рё Р·Р°РєСЂРѕР№С‚Рµ РёРЅРІРµРЅС‚Р°СЂСЊ.
+{AFE7FF}[2]{ffffff} РџСЂРё Р·Р°РјРµРЅРµ РёРєРѕРЅРѕРє РЅР° СЃРІРѕРё, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЂР°Р·РјРµСЂ {ffcc00}32x32{ffffff} РїРёРєСЃРµР»СЏ.
+{ffcc00}Рћ СЃРєСЂРёРїС‚Рµ:{ffffff}
+{AFE7FF}РќР°Р·РІР°РЅРёРµ (Р’РµСЂСЃРёСЏ){ffffff}			TRINITY Bars (v1.2)
+{AFE7FF}Р”Р°С‚Р° РїРѕСЃР»РµРґРЅРµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ{ffffff}		02.06.2022
+{AFE7FF}РђРІС‚РѕСЂ СЃРєСЂРёРїС‚Р°{ffffff}				eweest
+{AFE7FF}РќР°С€Рµ СЃРѕРѕР±С‰РµСЃС‚РІРѕ{ffffff}				vk.com/gtatrinitymods
 ]]
 
 
@@ -449,7 +449,7 @@ end
 
 function se.onShowTextDraw(id, data)
 	if TRINITYGTA then
-		if data.text:find("‹AЋ …H‹EHЏAP’") then
+		if data.text:find("вЂ№AР‹ вЂ¦HвЂ№EHРЏAPвЂ™") then
 			TABLE_ID["INV"] = id
 		end
 		-- // FOOD
@@ -550,21 +550,21 @@ function autoupdate(json_url, prefix, url)
               lua_thread.create(function(prefix)
                 local dlstatus = require('moonloader').download_status
                 local color = -1
-                sampAddChatMessage((prefix..'Обнаружено обновление. Пытаюсь обновиться c '..thisScript().version..' на '..updateversion), color)
+                sampAddChatMessage((prefix..'РћР±РЅР°СЂСѓР¶РµРЅРѕ РѕР±РЅРѕРІР»РµРЅРёРµ. РџС‹С‚Р°СЋСЃСЊ РѕР±РЅРѕРІРёС‚СЊСЃСЏ c '..thisScript().version..' РЅР° '..updateversion), color)
                 wait(250)
                 downloadUrlToFile(updatelink, thisScript().path,
                   function(id3, status1, p13, p23)
                     if status1 == dlstatus.STATUS_DOWNLOADINGDATA then
-                      print(string.format('Загружено %d из %d.', p13, p23))
+                      print(string.format('Р—Р°РіСЂСѓР¶РµРЅРѕ %d РёР· %d.', p13, p23))
                     elseif status1 == dlstatus.STATUS_ENDDOWNLOADDATA then
-                      print('Загрузка обновления завершена.')
-                      sampAddChatMessage((prefix..'Обновление завершено!'), color)
+                      print('Р—Р°РіСЂСѓР·РєР° РѕР±РЅРѕРІР»РµРЅРёСЏ Р·Р°РІРµСЂС€РµРЅР°.')
+                      sampAddChatMessage((prefix..'РћР±РЅРѕРІР»РµРЅРёРµ Р·Р°РІРµСЂС€РµРЅРѕ!'), color)
                       goupdatestatus = true
                       lua_thread.create(function() wait(500) thisScript():reload() end)
                     end
                     if status1 == dlstatus.STATUSEX_ENDDOWNLOAD then
                       if goupdatestatus == nil then
-                        sampAddChatMessage((prefix..'Обновление прошло неудачно. Запускаю устаревшую версию..'), color)
+                        sampAddChatMessage((prefix..'РћР±РЅРѕРІР»РµРЅРёРµ РїСЂРѕС€Р»Рѕ РЅРµСѓРґР°С‡РЅРѕ. Р—Р°РїСѓСЃРєР°СЋ СѓСЃС‚Р°СЂРµРІС€СѓСЋ РІРµСЂСЃРёСЋ..'), color)
                         update = false
                       end
                     end
@@ -574,11 +574,11 @@ function autoupdate(json_url, prefix, url)
               )
             else
               update = false
-              print('v'..thisScript().version..': Обновление не требуется.')
+              print('v'..thisScript().version..': РћР±РЅРѕРІР»РµРЅРёРµ РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ.')
             end
           end
         else
-          print('v'..thisScript().version..': Не могу проверить обновление. Смиритесь или проверьте самостоятельно на '..url)
+          print('v'..thisScript().version..': РќРµ РјРѕРіСѓ РїСЂРѕРІРµСЂРёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ. РЎРјРёСЂРёС‚РµСЃСЊ РёР»Рё РїСЂРѕРІРµСЂСЊС‚Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ РЅР° '..url)
           update = false
         end
       end
