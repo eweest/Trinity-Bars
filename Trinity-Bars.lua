@@ -104,7 +104,7 @@ function main()
 	if not isSampLoaded() or not isSampfuncsLoaded() then return end
 	while not isSampAvailable() do wait(100) end
 
--- 	autoupdate("https://raw.githubusercontent.com/eweest/trinity-bars/moonloader/update.json", '['..string.upper(thisScript().name)..']: ', "https://raw.githubusercontent.com/eweest/trinity-bars/moonloader/TRP-Bars.lua")
+		-- autoupdate("https://raw.githubusercontent.com/eweest/trinity-bars/moonloader/update.json", '['..string.upper(thisScript().name)..']: ', "https://raw.githubusercontent.com/eweest/trinity-bars/moonloader/Trinity-Bars.lua")
 
 	-- TRINITY SERVERS
 	local IP = sampGetCurrentServerAddress()
@@ -124,9 +124,9 @@ function main()
 		end
 		--
 		TRINITYGTA = true
-		sampAddChatMessage(TAG .. "{FFFFFF}??? ????. ???: {FFCC00}eweest{FFFFFF}. ???: {FFCC00}" .. thisScript().version .. "{FFFFFF}. ???? {FFCC00}" .. CMD_HELP, 0xFFCC00)
+		sampAddChatMessage(TAG .. "{FFFFFF}РЎРєСЂРёРїС‚ Р·Р°РїСѓС‰РµРЅ. РђРІС‚РѕСЂ: {FFCC00}eweest{FFFFFF}. Р’РµСЂСЃРёСЏ: {FFCC00}" .. thisScript().version .. "{FFFFFF}. РџРѕРјРѕС‰СЊ {FFCC00}" .. CMD_HELP, 0xFFCC00)
 	else
-		sampAddChatMessage(TAG .. "{FFFFFF}??? " .. thisScript().name .. " (v" .. thisScript().version .. ") ? ????, ?? ?? ? ???? ? ? Trinity GTA.", 0xFFCC00)
+		sampAddChatMessage(TAG .. "{FFFFFF}РЎРєСЂРёРїС‚ " .. thisScript().name .. " (v" .. thisScript().version .. ") РЅРµ Р·Р°РїСѓС‰РµРЅ, С‚Р°Рє РєР°Рє РІС‹ РёРіСЂС‹РµС‚Рµ РЅРµ РЅР° Trinity GTA.", 0xFFCC00)
 		TRINITYGTA = false 
 	end
 	----
@@ -134,7 +134,7 @@ function main()
 	--| COMMANDS
 	sampRegisterChatCommand("bars", function(cmd) -- HELP
 		if (cmd == "position" or cmd == "pos") then -- POSITION
-			sampAddChatMessage(TAG .. "{FFFFFF}?? ?????? ????, ???? {FFCC00}??? ??? ??? {FFFFFF}??FFCC00} ENTER.", 0xFFCC00)
+			sampAddChatMessage(TAG .. "{FFFFFF}Р”Р»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РїРѕР·РёС†РёРё, РЅР°Р¶РјРёС‚Рµ {FFCC00}Р»РµРІСѓСЋ РєРЅРѕРїРєСѓ РјС‹С€Рё {FFFFFF}РёР»Рё{FFCC00} ENTER.", 0xFFCC00)
 			setPosition = true
 		-- SETTINGS CMD
 		elseif (cmd == "number" or cmd == "num") then -- NUMBERS
@@ -142,37 +142,37 @@ function main()
 				DB["NUMBER"] = not DB["NUMBER"]
 				if DB["NUMBER"] then
 					addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
-					sampAddChatMessage(TAG .."{FFFFFF}????? ?????? ????? ? ???? {32FF32}????.", 0xFFCC00)
+					sampAddChatMessage(TAG .."{FFFFFF}РџРѕРєР°Р·Р°С‚РµР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёС„СЂР°С… {32FF32}РІРєР»СЋС‡РµРЅ.", 0xFFCC00)
 					DB["NUMBER"] = true
 				else
 					addOneOffSound(0.0, 0.0, 0.0, SOUNDS["CANCEL"])	
-					sampAddChatMessage(TAG .."{FFFFFF}????? ?????? ????? ? ???? {FF3232}?????.", 0xFFCC00)
+					sampAddChatMessage(TAG .."{FFFFFF}РџРѕРєР°Р·Р°С‚РµР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёС„СЂР°С… {FF3232}РѕС‚РєР»СЋС‡РµРЅ.", 0xFFCC00)
 					DB["NUMBER"] = false
 				end
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}????? ?????? ????? ? ???? ???? ??? ? ??? {FFCC00}#1 '????'{FFFFFF}.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РџРѕРєР°Р·Р°С‚РµР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РІ С†РёС„СЂР°С… РґРѕСЃС‚СѓРїРµРЅ С‚РѕР»СЊРєРѕ РІ СЃС‚РёР»Рµ {FFCC00}#1 'РЎС‚Р°РјРёРЅР°'{FFFFFF}.", 0xFFCC00)
 			end
 			saveDB()
 		elseif (cmd == "view" or cmd == "vw") then -- VIEW MODE
 			DB["VIEW"] = not DB["VIEW"]
 			if DB["VIEW"] then
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
-				sampAddChatMessage(TAG .."{FFFFFF}?????? ????? {32FF32}?????.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РџРѕС‚СЂРµР±РЅРѕСЃС‚Рё РїРµСЂСЃРѕРЅР°Р¶Р° {32FF32}РІРєР»СЋС‡РµРЅС‹.", 0xFFCC00)
 				DB["VIEW"] = true
 			else
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["CANCEL"])	
-				sampAddChatMessage(TAG .."{FFFFFF}?????? ????? {FF3232}??????.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РџРѕС‚СЂРµР±РЅРѕСЃС‚Рё РїРµСЂСЃРѕРЅР°Р¶Р° {FF3232}РѕС‚РєР»СЋС‡РµРЅС‹.", 0xFFCC00)
 				DB["VIEW"] = false
 			end
 			saveDB()
 		elseif (cmd == "rotation" or cmd == "rt") then -- VIEW MODE
 			if DB["ROT"] ~= "HORIZONTAL" and (cmd == "rot" or cmd == "rt") then
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
-				sampAddChatMessage(TAG .."{FFFFFF}? ?????? {FFCC00}????????FFFFFF} ???.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}Р’С‹ Р°РєС‚РёРІРёСЂРѕРІР°Р»Рё {FFCC00}Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№{FFFFFF} СЂРµР¶РёРј.", 0xFFCC00)
 				DB["ROT"] = "HORIZONTAL"
 			else
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["CANCEL"])	
-				sampAddChatMessage(TAG .."{FFFFFF}? ?????? {FFCC00}???????FFFFFF} ???.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}Р’С‹ Р°РєС‚РёРІРёСЂРѕРІР°Р»Рё {FFCC00}Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Р№{FFFFFF} СЂРµР¶РёРј.", 0xFFCC00)
 				DB["ROT"] = "VERTICAL"
 			end
 			saveDB()
@@ -180,30 +180,30 @@ function main()
 		elseif (cmd == "type 1") then -- TYPE 1
 			if (DB["TYPE"] ~= 1) then
 				DB["TYPE"] = 1
-				sampAddChatMessage(TAG .."{FFFFFF}??? ?????? ????? ????. ????: {FFCC00} #1 '????'.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #1 'РЎС‚Р°РјРёРЅР°'.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}??? ?????? ????? {FFCC00}#1 '????'{FFFFFF} ?? ??????!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° {FFCC00}#1 'РЎС‚Р°РјРёРЅР°'{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
 		elseif (cmd == "type 2") then -- TYPE 2
 			if (DB["TYPE"] ~= 2) then
 				DB["TYPE"] = 2
-				sampAddChatMessage(TAG .."{FFFFFF}??? ?????? ????? ????. ????: {FFCC00} #2 '???'.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #2 'Р¦РёС„СЂС‹'.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}??? ?????? ????? {FFCC00}#2 '???'{FFFFFF} ?? ??????!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° {FFCC00}#2 'Р¦РёС„СЂС‹'{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
 		elseif (cmd == "type 3") then -- TYPE 3
 			if (DB["TYPE"] ~= 3) then
 				DB["TYPE"] = 3
-				sampAddChatMessage(TAG .."{FFFFFF}??? ?????? ????? ????. ????: {FFCC00} #3.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #3.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}??? ?????? ????? {FFCC00}#3{FFFFFF} ?? ??????!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° {FFCC00}#3{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
@@ -212,20 +212,20 @@ function main()
 		elseif (cmd == "icons 1") then -- ICONS 1
 			if (DB["ICON_STYLE"] ~= 1) then
 				DB["ICON_STYLE"] = 1
-				sampAddChatMessage(TAG .."{FFFFFF}??? ??? ????. ????: {FFCC00} #1.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #1.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}??? ??? {FFCC00}#1{FFFFFF} ?? ??????!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє {FFCC00}#1{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
 		elseif (cmd == "icons 2") then -- ICONS 2
 			if (DB["ICON_STYLE"] ~= 2) then
 				DB["ICON_STYLE"] = 2
-				sampAddChatMessage(TAG .."{FFFFFF}??? ??? ????. ????: {FFCC00} #2.", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє РёР·РјРµРЅРµРЅ. Р’Р°СЂРёР°РЅС‚: {FFCC00} #2.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 			else
-				sampAddChatMessage(TAG .."{FFFFFF}??? ??? {FFCC00}#2{FFFFFF} ?? ??????!", 0xFFCC00)
+				sampAddChatMessage(TAG .."{FFFFFF}РЎС‚РёР»СЊ РёРєРѕРЅРѕРє {FFCC00}#2{FFFFFF} СѓР¶Рµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ!", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
 			end
 			saveDB()
@@ -235,7 +235,7 @@ function main()
 			addOneOffSound(0.0, 0.0, 0.0, 1139)
 		else
 			addOneOffSound(0.0, 0.0, 0.0, SOUNDS["ERROR"])
-			sampAddChatMessage(TAG .."{FFFFFF}?????? ????. ????: {FFCC00}/bars.", 0xFF3232)
+			sampAddChatMessage(TAG .."{FFFFFF}РќРµРёР·РІРµСЃС‚РЅР°СЏ РєРѕРјР°РЅРґР°. Р’РІРµРґРёС‚Рµ: {FFCC00}/bars.", 0xFF3232)
 		end
 	end)
 	----
@@ -248,7 +248,7 @@ function main()
 
 			if isKeyDown(0x01) or isKeyDown(0x0D) then -- LMB or ENTER
 				showCursor(false, false)
-				sampAddChatMessage(TAG .. "{FFFFFF}????? ?????? ????? ?????.", 0xFFCC00)
+				sampAddChatMessage(TAG .. "{FFFFFF}РџРѕР»РѕР¶РµРЅРёРµ РїРѕС‚СЂРµР±РЅРѕСЃС‚РµР№ РїРµСЂСЃРѕРЅР°Р¶Р° СЃРѕС…СЂР°РЅРµРЅРѕ.", 0xFFCC00)
 				addOneOffSound(0.0, 0.0, 0.0, SOUNDS["DONE"])
 				setPosition = false
 				saveDB()
@@ -419,171 +419,9 @@ end
 -- CREATE CUSTOM BARS [END]
 
 -- HELP WINDOW [START]
-local TITLE = "???? ?: {FFFFFF}"
+local TITLE = "РџРѕРјРѕС‰СЊ РїРѕ: {FFFFFF}"
 local TITLE_COLOR = "{AFE7FF}"
 local TEXT_CMD = [[
-{ffcc00}????? ????:{ffffff}
-{AFE7FF}/bars{ffffff} - ?? ????
-{AFE7FF}/bars (pos)ition{ffffff} - ????? ????
-{AFE7FF}/bars type [1-3]{ffffff} - ????? ??? ??????
-{AFE7FF}/bars icons [1-2]{ffffff} - ????? ??? ???
-{AFE7FF}/bars rotation(rt){ffffff} - ????? ??? (?????? ?? ???????)
-{AFE7FF}/bars (num)ber{ffffff} - ????/??? ??? ? ??? #1 "????"
-{AFE7FF}/bars view(vw){ffffff} - ????/???
-{ffcc00}????? ???:{ffffff}
-{AFE7FF}[1]{ffffff} ?? ????? ?????? "0" ? {FF3232}??? ????ffffff}, ???? ? ???? ?????.
-{AFE7FF}[2]{ffffff} ?? ??? ??? ? ??, ?????? ??? {ffcc00}32x32{ffffff} ????.
-{ffcc00}? ????:{ffffff}
-{AFE7FF}???? (???){ffffff}			TRINITY Bars (v1.2)
-{AFE7FF}?? ????? ?????{ffffff}		02.06.2022
-{AFE7FF}??? ????ffffff}				eweest
-{AFE7FF}??? ??????ffffff}				vk.com/gtatrinitymods
-]]
-
-
-function cmdHelpCMD()
-	sampShowDialog(10000, TITLE_COLOR .. TITLE .. thisScript().name, TEXT_CMD, "X")
-end
--- HELP WINDOW [END]
-
-
-function se.onShowTextDraw(id, data)
-	if TRINITYGTA then
-		if data.text:find("?A? ?H?EH?AP?") then
-			TABLE_ID["INV"] = id
-		end
-		-- // FOOD
-		if data.letterColor == -14500865 or data.letterColor == -14518409 then
-			TABLE_ID["WATER"] = id
-		end
-		-- // WATER
-		if data.letterColor == -15744669 or data.letterColor == -13399996 then
-			TABLE_ID["FOOD"] = id
-		end
-		-- // HYGIENE
-		if data.letterColor == -3372988 then
-			TABLE_ID["HYGIENE"] = id
-		end
-		-- // BLACK BACKGROUND
-		if data.letterColor == -16777216 then
-			if not search(id, TABLE_ID["OTHER"]) then
-				table.insert(TABLE_ID["OTHER"], id)
-			end
-		end
-	end
-end
---
-
-function getPlayerFood(id)
-	if TRINITYGTA then
-		if id ~= -1 then
-			if sampTextdrawIsExists(id) then
-				local box, color, sizeX, sizeY = sampTextdrawGetBoxEnabledColorAndSize(id)
-				return sizeX
-			end
-		end
-	end
-	return 0
-end
-
-function getPlayerWater(id)
-	if TRINITYGTA then
-		if id ~= -1 then
-			if sampTextdrawIsExists(id) then
-				local box, color, sizeX, sizeY = sampTextdrawGetBoxEnabledColorAndSize(id)
-				return sizeX
-			end
-		end
-	end
-	return 0
-end
-
-function getPlayerHygiene(id)
-	if TRINITYGTA then
-		if id ~= -1 then
-			if sampTextdrawIsExists(id) then
-				local box, color, sizeX, sizeY = sampTextdrawGetBoxEnabledColorAndSize(id)
-				return sizeX
-			end
-		end
-	end
-	return 0
-end
-
-function search(str, tab)
-	if str ~= nil then
-		for key, val in pairs(tab) do
-			if str == val then
-				return true
-			end
-		end
-	end
-	return false
-end
-
-
--- SAVE DATABASE
-function saveDB()
-	local file = io.open(DIRECT .. CONFIG_PATH .. FOLDER_MAIN_PATH ..  FOLDER_PATH .. DB_PATH, "w")
-	file:write(encodeJson(DB))
-	file:close()
-end
-----
-
--- AUTO-UPDATE
-function autoupdate(json_url, prefix, url)
-  local dlstatus = require('moonloader').download_status
-  local json = getWorkingDirectory() .. '\\'..thisScript().name..'-version.json'
-  if doesFileExist(json) then os.remove(json) end
-  downloadUrlToFile(json_url, json,
-    function(id, status, p1, p2)
-      if status == dlstatus.STATUSEX_ENDDOWNLOAD then
-        if doesFileExist(json) then
-          local f = io.open(json, 'r')
-          if f then
-            local info = decodeJson(f:read('*a'))
-            updatelink = info.updateurl
-            updateversion = info.latest
-            f:close()
-            os.remove(json)
-            if updateversion ~= thisScript().version then
-              lua_thread.create(function(prefix)
-                local dlstatus = require('moonloader').download_status
-                local color = -1
-                sampAddChatMessage((prefix..'????? ?????. ???? ????? c '..thisScript().version..' ? '..updateversion), color)
-                wait(250)
-                downloadUrlToFile(updatelink, thisScript().path,
-                  function(id3, status1, p13, p23)
-                    if status1 == dlstatus.STATUS_DOWNLOADINGDATA then
-                      print(string.format('????? %d ? %d.', p13, p23))
-                    elseif status1 == dlstatus.STATUS_ENDDOWNLOADDATA then
-                      print('???? ????? ?????.')
-                      sampAddChatMessage((prefix..'????? ?????!'), color)
-                      goupdatestatus = true
-                      lua_thread.create(function() wait(500) thisScript():reload() end)
-                    end
-                    if status1 == dlstatus.STATUSEX_ENDDOWNLOAD then
-                      if goupdatestatus == nil then
-                        sampAddChatMessage((prefix..'????? ??? ????. ???? ????? ???..'), color)
-                        update = false
-                      end
-                    end
-                  end
-                )
-                end, prefix
-              )
-            else
-              update = false
-              print('v'..thisScript().version..': ????? ? ?????.')
-            end
-          end
-        else
-          print('v'..thisScript().version..': ? ?? ????? ?????. ????? ?? ????? ??????? ? '..url)
-          update = false
-        end
-      end
-    end
-  )
-  while update ~= false do wait(100) end
-end
-----
+{ffcc00}РћСЃРЅРѕРІРЅС‹Рµ РєРѕРјР°РЅРґС‹:{ffffff}
+{AFE7FF}/bars{ffffff} - РћРєРЅРѕ РїРѕРјРѕС‰Рё
+{AFE7FF}/bars (pos)ition{ffffff} - Р
