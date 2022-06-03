@@ -104,7 +104,7 @@ function main()
 	if not isSampLoaded() or not isSampfuncsLoaded() then return end
 	while not isSampAvailable() do wait(100) end
 
-	autoupdate("тут ссылка на ваш json", '['..string.upper(thisScript().name)..']: ', "тут ссылка на ваш сайт/url вашего скрипта на форуме (если нет, оставьте как в json)")
+	-- autoupdate("https://raw.githubusercontent.com/eweest/trinity-bars/moonloader/update.json", '['..string.upper(thisScript().name)..']: ', "https://vk.com/gtatrinitymods")
 
 	-- TRINITY SERVERS
 	local IP = sampGetCurrentServerAddress()
