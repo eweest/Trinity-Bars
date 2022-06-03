@@ -1,6 +1,6 @@
 -- ABOUT SCRIPT
 script_name("Trinity Bars")
-script_version("1.2")
+script_version("1.3")
 script_author("eweest")
 script_description("vk.com/gtatrinitymods")
 
