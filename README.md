@@ -17,6 +17,7 @@
 `/bars rotation(rt)` - Изменение режима (Вертикально или Горизонтально)<br>
 `/bars (num)ber` - Показать/Скрыть цифры в режиме #1 "Стамина"<br>
 `/bars view(vw)` - Показать/Скрыть<br>
+`/bars (up)date` - Включить/Выключить автообновление<br>
 
 # Изображения
 ![Изображение](https://sun9-19.userapi.com/s/v1/if2/-xUfv3hclV7aQt3VYzbs_hiUnsh3CFdMaTAstvrj3koYySnsMvreGD2asDVgLNSrXJdbZ86Tud9YXENY-u9GYwFZ.jpg?size=1920x1080&quality=95&type=album)
