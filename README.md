@@ -20,7 +20,7 @@
 `/bars (up)date` - Включить/Выключить автообновление<br>
 
 # Изображения
-![Изображение](https://sun9-19.userapi.com/s/v1/if2/-xUfv3hclV7aQt3VYzbs_hiUnsh3CFdMaTAstvrj3koYySnsMvreGD2asDVgLNSrXJdbZ86Tud9YXENY-u9GYwFZ.jpg?size=1920x1080&quality=95&type=album)
+![image](https://user-images.githubusercontent.com/34632663/176974565-3f4d7c0c-c568-4d6f-9ee7-b8aeadab4422.png)
 
 # Наша группа VK
 **[TRINITY GTA Mods](https://vk.com/gtatrinitymods)**
